@@ -3,7 +3,7 @@
 import { SignInButton, SignUpButton, UserButton, useUser } from "@clerk/nextjs";
 import { DumbbellIcon, HomeIcon, Menu, UserIcon, X, ZapIcon } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 
 const Navbar = () => {
@@ -12,6 +12,21 @@ const Navbar = () => {
 
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
   const closeMobileMenu = () => setMobileMenuOpen(false);
+
+    // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (mobileMenuOpen) {
+        const menu = document.getElementById("mobile-menu");
+        if (menu && !menu.contains(e.target as Node)) {
+          closeMobileMenu();
+        }
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [mobileMenuOpen]);
 
   const renderAuthButtons = () => {
     if (isSignedIn) {
@@ -92,7 +107,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/60 backdrop-blur-md border-b border-border py-3 px-4 sm:px-6 md:px-15">
+    <header className="fixed top-0 left-0 right-0 z-50  bg-background/60 backdrop-blur-md border-b border-border py-3 px-4 sm:px-6 md:px-15">
       <div className="container mx-auto flex items-center justify-between">
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-2">
@@ -116,11 +131,11 @@ const Navbar = () => {
         {/* Mobile Menu Overlay */}
         {mobileMenuOpen && (
           <div 
-            className="fixed inset-0 bg-background/95 z-40 md:hidden"
+            className="fixed inset-0 bg-background/95  md:hidden"
             onClick={closeMobileMenu}
           >
             <div 
-              className="w-[150px] absolute top-16 right-10  bg-background border rounded-lg p-6 shadow-lg"
+              className="w-[150px] absolute top-16 right-4  bg-background border rounded-lg p-6 shadow-lg"
               onClick={(e) => e.stopPropagation()}
             >
               {renderAuthButtons()}

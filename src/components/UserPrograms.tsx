@@ -39,14 +39,7 @@ const UserPrograms = () => {
             </p>
 
             {/* STATS */}
-            <div className="flex items-center justify-center gap-16 mt-10 font-mono">
-              <div className="flex flex-col items-center">
-                <p className="text-3xl text-primary">500+</p>
-                <p className="text-sm text-muted-foreground uppercase tracking-wide mt-1">
-                  PROGRAMS
-                </p>
-              </div>
-              <div className="w-px h-12 bg-border"></div>
+            <div className="flex items-center justify-center gap-5 md:gap-16 mt-10 font-mono">
               <div className="flex flex-col items-center">
                 <p className="text-3xl text-primary">3min</p>
                 <p className="text-sm text-muted-foreground uppercase tracking-wide mt-1">
@@ -172,14 +165,14 @@ const UserPrograms = () => {
                 </div>
               </CardContent>
 
-              <CardFooter className="px-5 py-4 border-t border-border">
+              {/* <CardFooter className="px-5 py-4 border-t border-border">
                 <Link href={`/programs/${program.id}`} className="w-full">
                   <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
                     View Program Details
                     <ChevronRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
-              </CardFooter>
+              </CardFooter> */}
             </Card>
           ))}
         </div>
