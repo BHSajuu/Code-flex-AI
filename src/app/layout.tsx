@@ -18,6 +18,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "CodeFlex AI",
   description: "A modern fitness AI platform to get jacked for free.",
+  icons: {
+    icon: "hero-ai2.png",
+  },
 };
 
 export default function RootLayout({
