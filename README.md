@@ -15,11 +15,11 @@
 
 ## Features
 - 🎙️ Smart AI Assistant
-  - Chat with an AI that asks about your fitness goals, body state, and likes.
+  - Engage in conversation with an AI that asks about your fitness goals, physical condition, and preferences
 - 🏋️ Personalized Workout Plans
-  - Get routines that fit your level, injuries, and goals.
+  - Get custom exercise routines based on your fitness level, injuries, and goals
 - 🥗 Diet Recommendations
-  - Meal plans that match your allergies and food likes.
+  - Receive personalized meal plans accounting for your allergies and dietary preferences
 - 🔒 User Authentication
   - Sign in via GitHub, Google, or email/password.
 - 💾 Program Management
