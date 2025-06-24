@@ -7,7 +7,7 @@ import Link from "next/link";
 const HomePage = () => {
   return (
     <div className="flex flex-col min-h-screen text-foreground overflow-hidden">
-      <section className="px-10 relative z-10 py-18 flex-grow">
+      <section className="px-10 relative z-10 py-10 lg:py-18 flex-grow">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative">
             {/* CORNER DECARATION */}
