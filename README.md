@@ -1,3 +1,6 @@
+# AI Fitness Trainer
+
+
 ## Highlights
 - 🚀 Tech stack: Next.js, React, Tailwind & Shadcn UI
 - 🎙️ Voice AI Assistant (Vapi)
