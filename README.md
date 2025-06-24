@@ -24,3 +24,8 @@
   - Only the latest program is active at a time.
 - 📱 Responsive Design
   - UI looks good on phones, tablets, and desktops.
+
+
+---
+
+# Live Demo :- https://ai-fitness-trainer-dusky.vercel.app/
