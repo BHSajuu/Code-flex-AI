@@ -120,9 +120,6 @@ const GenerateProgramPage = () => {
     };
   }, []);
 
-
-
-
   const toggleCall = async () => {
     if (callActive) vapi.stop();
     else {
@@ -130,9 +127,11 @@ const GenerateProgramPage = () => {
         setConnecting(true);
         setMessages([]);
         setCallEnded(false);
+
         const fullName = user?.firstName
           ? `${user.firstName} ${user.lastName || ""}`.trim()
           : "There";
+
 
         await vapi.start(
           undefined,
@@ -152,7 +151,6 @@ const GenerateProgramPage = () => {
       }
     }
   };
-
 
   return (
     <div className="flex flex-col min-h-screen text-foreground overflow-hidden  pb-6 pt-24">

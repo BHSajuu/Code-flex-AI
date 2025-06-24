@@ -56,7 +56,7 @@ export const getUserPlans = query({
       .withIndex("by_user_id", (q) => q.eq("userId", args.userId))
       .order("desc")
       .collect();
-
+      
     return plans;
   },
 });
