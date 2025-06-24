@@ -9,7 +9,7 @@ const Navbar = () => {
   const { isSignedIn } = useUser();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/60 backdrop-blur-md border-b border-border py-3">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/60 backdrop-blur-md border-b border-border py-3 px-6 md:px-15">
       <div className="container mx-auto flex items-center justify-between">
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-2">
@@ -22,7 +22,7 @@ const Navbar = () => {
         </Link>
 
         {/* NAVIGATION */}
-        <nav className="flex items-center gap-5">
+        <nav className="flex items-center gap-5 lg:gap-10">
           {isSignedIn ? (
             <>
               <Link
@@ -30,7 +30,7 @@ const Navbar = () => {
                 className="flex items-center gap-1.5 text-sm hover:text-primary transition-colors"
               >
                 <HomeIcon size={16} />
-                <span>Home</span>
+                <span className="hidden lg:block">Home</span>
               </Link>
 
               <Link
@@ -38,7 +38,7 @@ const Navbar = () => {
                 className="flex items-center gap-1.5 text-sm hover:text-primary transition-colors"
               >
                 <DumbbellIcon size={16} />
-                <span>Generate</span>
+                <span className="hidden lg:block">Generate</span>
               </Link>
 
               <Link
@@ -46,14 +46,14 @@ const Navbar = () => {
                 className="flex items-center gap-1.5 text-sm hover:text-primary transition-colors"
               >
                 <UserIcon size={16} />
-                <span>Profile</span>
+                <span className="hidden lg:block">Profile</span>
               </Link>
               <Button
                 asChild
                 variant="outline"
-                className="ml-2 border-primary/50 text-primary hover:text-white hover:bg-primary/10"
+                className="ml-2 border-primary/50 text-primary hover:text-white hover:bg-primary/10 hidden lg:block"
               >
-                <Link href="/generate-program">Get Started</Link>
+                <Link href="/generate-program" >Get Started</Link>
               </Button>
               <UserButton />
             </>
