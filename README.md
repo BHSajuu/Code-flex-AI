@@ -1,6 +1,3 @@
-# AI Fitness Trainer
-
-
 ## Highlights
 - 🚀 Tech stack: Next.js, React, Tailwind & Shadcn UI
 - 🎙️ Voice AI Assistant (Vapi)
@@ -15,11 +12,11 @@
 
 ## Features
 - 🎙️ Smart AI Assistant
-  - Engage in conversation with an AI that asks about your fitness goals, physical condition, and preferences
+  - Chat with an AI that asks about your fitness goals, body state, and likes.
 - 🏋️ Personalized Workout Plans
-  - Get custom exercise routines based on your fitness level, injuries, and goals
+  - Get routines that fit your level, injuries, and goals.
 - 🥗 Diet Recommendations
-  - Receive personalized meal plans accounting for your allergies and dietary preferences
+  - Meal plans that match your allergies and food likes.
 - 🔒 User Authentication
   - Sign in via GitHub, Google, or email/password.
 - 💾 Program Management
@@ -27,8 +24,3 @@
   - Only the latest program is active at a time.
 - 📱 Responsive Design
   - UI looks good on phones, tablets, and desktops.
-
-
----
-
-## Live Demo :- https://ai-fitness-trainer-dusky.vercel.app/

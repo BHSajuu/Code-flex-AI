@@ -4,6 +4,7 @@ import "./globals.css";
 import ConvexClerkProvider from "@/providers/ConvexClerkProvider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CodeFlex AI",
-  description: "A modern fitness AI platform to get jacked for free.",
+  title: "FitFlow AI",
+  description: "Transform your fitness journey with AI-powered personalized training and nutrition plans.",
   icons: {
     icon: "hero-ai2.png",
   },
@@ -32,19 +33,23 @@ export default function RootLayout({
     <ConvexClerkProvider>
       <html lang="en">
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        > <Navbar />
-              {/* GRID BACKGROUND */}
-          <div className="fixed inset-0 -z-1">
-            <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-background"></div>
-            <div className="absolute inset-0 bg-[linear-gradient(var(--cyber-grid-color)_1px,transparent_1px),linear-gradient(90deg,var(--cyber-grid-color)_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-          </div>
-
-          <main className="pt-24 flex-grow">{children}</main>
-          <Footer/>
+          className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
+        >
+          <Navbar />
+          <main className="pt-20">{children}</main>
+          <Footer />
+           <Toaster
+          position="top-right"
+          toastOptions={{
+            style: {
+              borderRadius: "8px",
+              background: "#C0C9EE",
+              color: "#090040",
+            },
+          }}
+        />
         </body>
       </html>
     </ConvexClerkProvider>
-
   );
 }
